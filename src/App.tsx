@@ -24,6 +24,9 @@ function App() {
     }
   })
   const [showFavOnly, setShowFavOnly] = useState(false)
+  const [regionFilter, setRegionFilter] = useState('전체')
+
+  const regions = ['전체', '요괴 짐승길', '인간 마을', '하쿠레이 신사', '홍마관', '모든 지역']
 
   useEffect(() => {
     const timer = setTimeout(() => setDebouncedSearch(search), 300)
@@ -80,9 +83,10 @@ function App() {
       const commonOk = normalizedSearch === '' || commonText.includes(normalizedSearch)
       const likeOk = normalizedLike === '' || g.likes.some((v) => normalize(v).includes(normalizedLike))
       const dislikeOk = normalizedDislike === '' || g.dislikes.some((v) => normalize(v).includes(normalizedDislike))
+      const regionOk = regionFilter === '전체' || g.region === regionFilter
       const favOk = !showFavOnly || favorites.has(g.name)
 
-      return commonOk && likeOk && dislikeOk && favOk
+      return commonOk && likeOk && dislikeOk && regionOk && favOk
     })
     result.sort((a, b) => {
       const aFav = favorites.has(a.name) ? 0 : 1
@@ -90,7 +94,7 @@ function App() {
       return aFav - bFav
     })
     return result
-  }, [debouncedSearch, debouncedLike, debouncedDislike, showFavOnly, favorites])
+  }, [debouncedSearch, debouncedLike, debouncedDislike, regionFilter, showFavOnly, favorites])
 
   const regionClass = (value: string) => {
     if (value === '요괴 짐승길') return 'green'
@@ -125,6 +129,18 @@ function App() {
           onChange={(e) => setDislikeSearch(e.target.value)}
           placeholder="불호 태그 검색"
         />
+      </div>
+
+      <div className="regionBar">
+        {regions.map((r) => (
+          <button
+            key={r}
+            className={`regionBtn ${regionClass(r)} ${regionFilter === r ? 'regionBtnActive' : ''}`}
+            onClick={() => setRegionFilter(r)}
+          >
+            {r}
+          </button>
+        ))}
       </div>
 
       <div className="favBar">
