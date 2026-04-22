@@ -57,8 +57,8 @@ const guests: Guest[] = [
     name: '첸',
     region: '요괴 짐승길',
     image: chen,
-    likes: ['육류', '수산물', '기름짐', '단 맛', '구이류', '인기있음'],
-    dislikes: ['채식', '따뜻함', '이상함', '인기없음'],
+    likes: ['육류', '수산물', '기름짐', '단 맛', '구이류', '인기 있음'],
+    dislikes: ['채식', '따뜻함', '이상함', '인기 없음'],
     money: '400 ~ 600',
     foods: [
       '칠성장어 구이 + 벌꿀 (초반 전용)',
@@ -79,8 +79,8 @@ const guests: Guest[] = [
     name: '루미아',
     region: '요괴 짐승길',
     image: rumia,
-    likes: ['육류', '배부름', '날 것', '시그니처', '이상함', '인기있음'],
-    dislikes: ['술과 어울림', '고가', '인기없음'],
+    likes: ['육류', '배부름', '날 것', '시그니처', '이상함', '인기 있음'],
+    dislikes: ['술과 어울림', '고가', '인기 없음'],
     money: '150 ~ 350',
     foods: [
       '칠성장어 구이 + 선호속성 1개 (덮밥류 해금 전)',
@@ -102,8 +102,8 @@ const guests: Guest[] = [
     name: '카미시라사와 케이네',
     region: '인간 마을',
     image: keine,
-    likes: ['채식', '가정식', '담백함', '일식', '중식', '문화적', '인기있음'],
-    dislikes: ['기름짐', '짠맛', '대량', '인기없음'],
+    likes: ['채식', '가정식', '담백함', '일식', '중식', '문화적', '인기 있음'],
+    dislikes: ['기름짐', '짠 맛', '대량', '인기 없음'],
     money: '400 ~ 800',
     foods: [
       '취두부 + 선호속성 1개 (극초반 밤참새 / 은행조림 해금 전 중식 전용)',
@@ -125,8 +125,8 @@ const guests: Guest[] = [
     name: '히에다노 아큐',
     region: '인간 마을',
     image: akyuu,
-    likes: ['고급', '담백함', '일식', '단 맛', '문화적', '국류', '인기있음'],
-    dislikes: ['기름짐', '짠 맛', '따뜻함', '인기없음'],
+    likes: ['고급', '담백함', '일식', '단 맛', '문화적', '국류', '인기 있음'],
+    dislikes: ['기름짐', '짠 맛', '따뜻함', '인기 없음'],
     money: '500 ~ 800',
     foods: [
       '미역 된장국 + 선호속성 1개 (극초반 밤참새 전용)',
@@ -171,8 +171,8 @@ const guests: Guest[] = [
     name: '모리치카 린노스케',
     region: '인간 마을',
     image: rinnosuke,
-    likes: ['가정식', '배부름', '신선함', '인기있음'],
-    dislikes: ['이상함', '술과 어울림', '기름짐', '인기없음'],
+    likes: ['가정식', '배부름', '신선함', '인기 있음'],
+    dislikes: ['이상함', '술과 어울림', '기름짐', '인기 없음'],
     money: '250 ~ 400',
     foods: ['주먹밥 + 양파', '돈가스 덮밥 + 양파'],
     drinks: ['초 ZUN 맥주', '과일 사와'],
@@ -187,8 +187,8 @@ const guests: Guest[] = [
     name: '하쿠레이 레이무',
     region: '하쿠레이 신사',
     image: reimu,
-    likes: ['고급', '배부름', '저가', '단 맛', '불가사의함', '인기있음'],
-    dislikes: ['술과 어울림', '고가', '인기없음'],
+    likes: ['고급', '배부름', '저가', '단 맛', '불가사의함', '인기 있음'],
+    dislikes: ['술과 어울림', '고가', '인기 없음'],
     money: '150 ~ 300',
     foods: [
       '주먹밥 + 선호 속성 1개',
@@ -209,8 +209,8 @@ const guests: Guest[] = [
     name: '이부키 스이카',
     region: '하쿠레이 신사',
     image: suika,
-    likes: ['육류', '술과 어울림', '일식', '작음', '힘이 넘침', '인기있음'],
-    dislikes: ['기름짐', '인기없음'],
+    likes: ['육류', '술과 어울림', '일식', '작음', '힘이 넘침', '인기 있음'],
+    dislikes: ['기름짐', '인기 없음'],
     money: '600 ~ 800',
     foods: ['고깃국', '냉두부', '두부 전골 + 무', '앵화낙설'],
     drinks: ['텐구오도리'],
@@ -227,8 +227,8 @@ const guests: Guest[] = [
     name: '히나나위 텐시',
     region: '하쿠레이 신사',
     image: tenshi,
-    likes: ['채식', '전설적', '담백함', '단 맛', '사진빨을 받음', '고가', '과일맛', '인기없음'],
-    dislikes: ['가정식', '육류', '기름짐', '인기있음'],
+    likes: ['채식', '전설적', '담백함', '단 맛', '사진빨을 받음', '고가', '과일맛', '인기 없음'],
+    dislikes: ['가정식', '육류', '기름짐', '인기 있음'],
     money: '2000 ~ 3000',
     foods: [
       '야채 샐러드 (초반 한정)',
@@ -284,7 +284,7 @@ const guests: Guest[] = [
     region: '홍마관',
     image: meiling,
     likes: ['육류', '배부름', '중식', '힘이 넘침'],
-    dislikes: ['양식', '이상함', '과일맛', '인기없음'],
+    dislikes: ['양식', '이상함', '과일맛', '인기 없음'],
     money: '200 ~ 400',
     foods: [
       '고깃국 (힘이 넘침, 육류)',
@@ -310,7 +310,7 @@ const guests: Guest[] = [
     region: '홍마관',
     image: cirno,
     likes: ['단 맛', '사진빨을 받음', '이상함', '시원함'],
-    dislikes: ['술과 어울림', '문화적', '고가', '인기없음'],
+    dislikes: ['술과 어울림', '문화적', '고가', '인기 없음'],
     money: '100 ~ 200',
     foods: [
       '순무 조각꽃 (시원함, 사진빨을 받음)',
@@ -393,21 +393,26 @@ function App() {
     })
   }
 
+  const normalize = (str: string) => str.replace(/\s/g, '').toLowerCase()
+
   const filtered = useMemo(() => {
     const result = guests.filter((g) => {
-      const commonText = [
+      const commonText = normalize([
         g.name,
         g.region,
         ...g.foods,
         ...g.drinks,
         ...g.quotes,
         ...g.materials,
-      ].join(' ')
+      ].join(' '))
 
-      const commonOk = search.trim() === '' || commonText.includes(search)
-      const likeOk = likeSearch.trim() === '' || g.likes.some((v) => v.includes(likeSearch))
-      const dislikeOk =
-        dislikeSearch.trim() === '' || g.dislikes.some((v) => v.includes(dislikeSearch))
+      const normalizedSearch = normalize(search)
+      const normalizedLike = normalize(likeSearch)
+      const normalizedDislike = normalize(dislikeSearch)
+
+      const commonOk = normalizedSearch === '' || commonText.includes(normalizedSearch)
+      const likeOk = normalizedLike === '' || g.likes.some((v) => normalize(v).includes(normalizedLike))
+      const dislikeOk = normalizedDislike === '' || g.dislikes.some((v) => normalize(v).includes(normalizedDislike))
       const favOk = !showFavOnly || favorites.has(g.name)
 
       return commonOk && likeOk && dislikeOk && favOk
