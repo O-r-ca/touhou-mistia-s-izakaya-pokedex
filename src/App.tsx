@@ -493,8 +493,8 @@ function App() {
                     {isOpen ? '접기' : '상세 보기'}
                   </button>
 
-                  {isOpen && (
-                    <div className="detail">
+                  <div className={`detail ${isOpen ? 'detailOpen' : ''}`}>
+                    <div className="detailInner">
                       <p><b>선호 태그</b></p>
                       <div className="tags">
                         {guest.likes.map((v) => (
@@ -542,7 +542,7 @@ function App() {
                         ))}
                       </ul>
                     </div>
-                  )}
+                  </div>
                 </div>
               </div>
             )
