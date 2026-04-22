@@ -11,6 +11,7 @@
 | 메인 화면 | 상세 펼침 | 검색 결과 |
 |:---------:|:---------:|:---------:|
 | ![메인](public/screenshots/main.png) | ![상세](public/screenshots/detail.png) | ![검색](public/screenshots/search.png) |
+| 배너, 지역 필터, 카드 목록 | 선호/불호 태그, 추천 음식·주류·재료 | 검색어 + 지역 필터 동시 적용 예시 |
 
 ---
 
@@ -63,13 +64,24 @@
 
 ```
 src/
-├── assets/        # 이미지 파일
+├── assets/        # 캐릭터 이미지 및 배너
 ├── components/
-│   └── GuestCard.tsx
+│   └── GuestCard.tsx  # 손님 카드 UI 컴포넌트
 ├── data/
-│   └── guests.ts
+│   └── guests.ts      # 손님 데이터 배열
 ├── types/
-│   └── guest.ts
-├── App.tsx
-└── App.css
+│   └── guest.ts       # Guest 타입 정의
+├── App.tsx            # 검색/필터 로직 및 레이아웃
+└── App.css            # 전체 스타일
+```
+
+---
+
+## 로컬 실행 방법
+
+```bash
+git clone https://github.com/O-r-ca/touhou-mistia-s-izakaya-pokedex.git
+cd touhou-mistia-s-izakaya-pokedex
+npm install
+npm run dev
 ```
