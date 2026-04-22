@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@700;900&family=Nanum+Brush+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@700;900&family=Nanum+Brush+Script&family=Gowun+Dodum&display=swap');
 
 * {
   box-sizing: border-box;
@@ -203,6 +203,7 @@ h2 {
   font-size: 28px;
   line-height: 1.25;
   text-align: left;
+  font-family: 'Gowun Dodum', sans-serif;
 }
 
 button {
