@@ -362,6 +362,9 @@ function App() {
   const [search, setSearch] = useState('')
   const [likeSearch, setLikeSearch] = useState('')
   const [dislikeSearch, setDislikeSearch] = useState('')
+  const [debouncedSearch, setDebouncedSearch] = useState('')
+  const [debouncedLike, setDebouncedLike] = useState('')
+  const [debouncedDislike, setDebouncedDislike] = useState('')
   const [open, setOpen] = useState<Set<string>>(new Set())
   const [favorites, setFavorites] = useState<Set<string>>(() => {
     try {
@@ -372,6 +375,21 @@ function App() {
     }
   })
   const [showFavOnly, setShowFavOnly] = useState(false)
+
+  useEffect(() => {
+    const timer = setTimeout(() => setDebouncedSearch(search), 300)
+    return () => clearTimeout(timer)
+  }, [search])
+
+  useEffect(() => {
+    const timer = setTimeout(() => setDebouncedLike(likeSearch), 300)
+    return () => clearTimeout(timer)
+  }, [likeSearch])
+
+  useEffect(() => {
+    const timer = setTimeout(() => setDebouncedDislike(dislikeSearch), 300)
+    return () => clearTimeout(timer)
+  }, [dislikeSearch])
 
   useEffect(() => {
     localStorage.setItem(FAVORITES_KEY, JSON.stringify([...favorites]))
@@ -406,9 +424,9 @@ function App() {
         ...g.materials,
       ].join(' '))
 
-      const normalizedSearch = normalize(search)
-      const normalizedLike = normalize(likeSearch)
-      const normalizedDislike = normalize(dislikeSearch)
+      const normalizedSearch = normalize(debouncedSearch)
+      const normalizedLike = normalize(debouncedLike)
+      const normalizedDislike = normalize(debouncedDislike)
 
       const commonOk = normalizedSearch === '' || commonText.includes(normalizedSearch)
       const likeOk = normalizedLike === '' || g.likes.some((v) => normalize(v).includes(normalizedLike))
@@ -423,7 +441,7 @@ function App() {
       return aFav - bFav
     })
     return result
-  }, [search, likeSearch, dislikeSearch, showFavOnly, favorites])
+  }, [debouncedSearch, debouncedLike, debouncedDislike, showFavOnly, favorites])
 
   const regionClass = (value: string) => {
     if (value === '요괴 짐승길') return 'green'
