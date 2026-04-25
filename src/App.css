@@ -59,6 +59,42 @@ h1 {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
+/* 지역 필터 바 */
+.regionBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.regionBtn {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-family: 'Gaegu', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0.45;
+  margin-bottom: 0;
+  transition: opacity 0.15s, transform 0.15s;
+}
+
+.regionBtn:hover {
+  opacity: 0.75;
+  background: inherit;
+}
+
+.regionBtnActive {
+  opacity: 1 !important;
+  transform: scale(1.06);
+}
+
+.regionBtn.gray {
+  background: #4b3a2a;
+}
+
 /* 즐겨찾기 필터 바 */
 .favBar {
   display: flex;
@@ -176,6 +212,10 @@ h1 {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 10px;
+}
+
+.yellow {
+  background: #ca8a04;
 }
 
 .green {

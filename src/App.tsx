@@ -26,7 +26,7 @@ function App() {
   const [showFavOnly, setShowFavOnly] = useState(false)
   const [regionFilter, setRegionFilter] = useState('전체')
 
-  const regions = ['전체', '요괴 짐승길', '인간 마을', '하쿠레이 신사', '홍마관', '모든 지역']
+  const regions = ['전체', '요괴 짐승길', '인간 마을', '하쿠레이 신사', '홍마관', '미혹의 죽림', '모든 지역']
 
   useEffect(() => {
     const timer = setTimeout(() => setDebouncedSearch(search), 300)
@@ -97,10 +97,11 @@ function App() {
   }, [debouncedSearch, debouncedLike, debouncedDislike, regionFilter, showFavOnly, favorites])
 
   const regionClass = (value: string) => {
-    if (value === '요괴 짐승길') return 'green'
+    if (value === '요괴 짐승길') return 'yellow'
     if (value === '인간 마을') return 'orange'
     if (value === '하쿠레이 신사') return 'red'
     if (value === '홍마관') return 'purple'
+    if (value === '미혹의 죽림') return 'green'
     return 'gray'
   }
 
