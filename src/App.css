@@ -214,6 +214,30 @@ h1 {
   margin-bottom: 10px;
 }
 
+.cobalt {
+  background: #1e40af;
+}
+
+.spacegray {
+  background: #6b7280;
+}
+
+.scarlet {
+  background: #e11d48;
+}
+
+.blue {
+  background: #3b82f6;
+}
+
+.darknavy {
+  background: #1e3a5f;
+}
+
+.black {
+  background: #1a1a1a;
+}
+
 .pink {
   background: #ec4899;
 }
