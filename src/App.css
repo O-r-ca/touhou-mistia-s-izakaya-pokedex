@@ -214,6 +214,22 @@ h1 {
   margin-bottom: 10px;
 }
 
+.pink {
+  background: #ec4899;
+}
+
+.brown {
+  background: #92400e;
+}
+
+.crimson {
+  background: #9f1239;
+}
+
+.mint {
+  background: #2dd4bf;
+}
+
 .yellow {
   background: #ca8a04;
 }
